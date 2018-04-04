@@ -1,8 +1,5 @@
 library(shiny)
 library(shinyjs)
-library(shinyBS)
-library(shinyLP)
-library(shinydashboard)
 library(shinythemes)
 library(tidyverse)
 library(leaflet)
@@ -10,11 +7,8 @@ library(readxl)
 library(dplyr)
 library(nominatim)
 
-
-#setwd("~/GitHub/localize/app_modules/")
 rm(list = ls())
 
-source("func.R")
 load("app_data.Rda")
 
 col <- nord::nord(palette="frost", 4)
@@ -35,7 +29,8 @@ ui <- fluidPage(
       id = "step1",
       
       h1("Welcome to localize!", align = "center"),
-      p("This is your personal profile. The more you tell us about yourself, the better we can tell you what you need.", align = "center"),
+      p("This is your personal profile. The more you tell us about yourself, the better we can tell you what you need.", 
+        align = "center"),
       hr(),
       
       fluidRow(
